@@ -17,3 +17,5 @@ And start it
 This machine is meant to be used for development and includes a testdb database already created as well as **postgres** password for *postgres* user.
 
 JDK 1.8.0_25
+
+Wildfly install script based on the one provided by Dmitriy Sukharev. For more info see http://sukharevd.net/wildfly-8-installation.html
