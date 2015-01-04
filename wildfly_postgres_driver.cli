@@ -1,0 +1,16 @@
+# Batch script to add the PostgreSQL driver to the JBoss server configuration
+
+connect
+
+# Start batching commands
+batch
+
+module add --name=org.postgres --resources=/home/vagrant/postgresql-9.3-1102.jdbc41.jar --dependencies=javax.api,javax.transaction.api
+/subsystem=datasources/jdbc-driver=postgres:add(driver-name="postgres",driver-module-name="org.postgres",driver-class-name=org.postgresql.Driver)
+data-source add --jndi-name=java:/jboss/datasources/PostgreDS --name=PostgreDS --connection-url=jdbc:postgresql://localhost/testdb --driver-name=postgres --user-name=postgres --password=postgres
+
+# Run the batch commands
+run-batch
+
+# Reload the server configuration
+:reload
