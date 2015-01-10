@@ -13,6 +13,8 @@ sudo chown wildfly:wildfly /opt/wildfly/standalone/configuration/mgmt-users.prop
 sudo chown wildfly:wildfly /opt/wildfly/standalone/configuration/mgmt-groups.properties
 
 sudo update-rc.d wildfly defaults
+#Enable debug mode
+sed -i -e 's,DEBUG_MODE=false,DEBUG_MODE=true,g' /opt/wildfly/bin/standalone.sh
 sudo service wildfly restart
 
 wget -q http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar

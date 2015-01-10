@@ -5,6 +5,8 @@ This will prepare a vagrant box based on Ubuntu 14.04 from cloud image and will 
 It will also forward the following local ports to the vagrant machine:
 * 5432 - PostgreSQL
 * 8080 - WildFly
+* 9990 - WildFly management console
+* 8787 - WildFly debug port
 
 To use it just import the box
 
