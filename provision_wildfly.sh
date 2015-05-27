@@ -17,5 +17,5 @@ sudo update-rc.d wildfly defaults
 sed -i -e 's,DEBUG_MODE=false,DEBUG_MODE=true,g' /opt/wildfly/bin/standalone.sh
 sudo service wildfly restart
 
-wget -q http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar
+wget -q https://jdbc.postgresql.org/download/postgresql-9.4-1201.jdbc41.jar
 sudo /opt/wildfly/bin/jboss-cli.sh --file=/vagrant/wildfly_postgres_driver.cli
