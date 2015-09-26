@@ -1,6 +1,6 @@
 #vagrant-ubuntu-14.04-postgresql-9.4-wildfly-8.2.0
 
-This will prepare a vagrant box based on Ubuntu 14.04 from cloud image and will install PostgreSQL 9.4, JDK 1.8.0_40 and WildFly 8.2.0.
+This will prepare a vagrant box based on Ubuntu 14.04 from cloud image and will install PostgreSQL 9.4, JDK 1.8.0_60 and WildFly 8.2.0.
 
 It will also forward the following local ports to the vagrant machine:
 * 5432 - PostgreSQL

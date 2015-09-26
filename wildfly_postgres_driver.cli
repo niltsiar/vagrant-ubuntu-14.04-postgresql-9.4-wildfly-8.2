@@ -7,7 +7,7 @@ batch
 
 module add --name=org.postgres --resources=/home/vagrant/postgresql-9.4-1201.jdbc41.jar --dependencies=javax.api,javax.transaction.api
 /subsystem=datasources/jdbc-driver=postgres:add(driver-name="postgres",driver-module-name="org.postgres",driver-class-name=org.postgresql.Driver)
-data-source add --jndi-name=java:jboss/datasources/PostgreDS --name=PostgreDS --connection-url=jdbc:postgresql://localhost/testdb --driver-name=postgres --user-name=postgres --password=postgres
+data-source add --jndi-name=java:jboss/datasources/PostgreDS --name=PostgreDS --connection-url=jdbc:postgresql://localhost/testdb --driver-name=postgres --user-name=postgres --password=postgres --use-java-context=true
 
 # Run the batch commands
 run-batch
