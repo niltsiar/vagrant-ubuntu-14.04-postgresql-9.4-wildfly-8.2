@@ -76,4 +76,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "provision_postgresql.sh"
   config.vm.provision :shell, path: "provision_java_8.sh"
   config.vm.provision :shell, path: "provision_wildfly.sh"
+  config.vm.provision :shell, path: "provision_wkhtmltopdf.sh"
 end
